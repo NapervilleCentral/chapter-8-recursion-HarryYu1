@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Palindromes
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=sentence
+comment2.target=boolean\ isPalindrome(java.lang.String)
+comment2.text=\r\n\ Test\ to\ see\ if\ a\ thing\ is\ a\ palindrome\r\n\ @param\ a\ String\ to\ test\r\n\ @return\ true\ or\ false,\ true\ if\ palindrome\r\n
+numComments=3
