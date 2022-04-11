@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=DataSet
+comment0.text=\r\n\ \ \ Computes\ the\ sum\ of\ a\ set\ of\ data\ values.\r\n
+comment1.params=values\ first\ last
+comment1.target=DataSet(int[],\ int,\ int)
+comment1.text=\r\n\ \ \ \ \ \ Constructs\ a\ DataSet\ object.\r\n\ \ \ \ \ \ @param\ values\ the\ data\ values\r\n\ \ \ \ \ \ @param\ first\ the\ first\ value\ in\ the\ data\ set\r\n\ \ \ \ \ \ @param\ last\ the\ last\ value\ in\ the\ data\ set\r\n
+comment2.params=
+comment2.target=int\ getSum()
+comment2.text=\r\n\ \ \ \ \ \ Gets\ the\ sum\ in\ the\ set\ of\ data\ values\r\n\ \ \ \ \ \ @return\ the\ sum\ value\ in\ the\ set\r\n
+numComments=3
