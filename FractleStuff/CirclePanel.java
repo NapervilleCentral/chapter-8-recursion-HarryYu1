@@ -46,11 +46,21 @@ public class CirclePanel extends JPanel
     
     void drawCircle(int x, int y, float radius,Graphics page) {
 
-	  page.drawOval(x,y,(int)radius,(int)radius);
+        page.drawOval(x,y,(int)radius,(int)radius);
 
+        radius *= 0.5;//smaller and smaller circle
+        
+        x += radius/2;
+        y += radius/2;
+        if (radius > 25)
+        {
+            page.setColor(Color.blue);
+            drawCircle((int) (x+radius/2),y,radius,page);
+            page.setColor(Color.red);
+            drawCircle((int) (x-radius/2), y, radius, page);
+        }
 
-
-	}//end of drawCircle
+    }//end of drawCircle
 
     
 }

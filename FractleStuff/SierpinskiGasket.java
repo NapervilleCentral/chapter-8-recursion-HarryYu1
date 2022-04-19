@@ -64,7 +64,7 @@ public class SierpinskiGasket extends JPanel
 
    */
 
-   public void Triangle(int[] xPos, int[] yPos, Graphics page)
+   public void Triangle(int[] xPosit, int[] yPosit, Graphics page)
    {
        int dxsquared = (int)Math.pow(xPos[0] - xPos[1],2);
        int dysquared = (int)Math.pow(yPos[0] - yPos[1],2);
@@ -77,10 +77,20 @@ public class SierpinskiGasket extends JPanel
             //find midpoints and draw triangle
             //int ABMidx = (xPos[0]
             //int ABMidy = (
+            int ABMidx = (xPosit[0] + xPosit[1]) /2;
+            int BCMidx = (xPos[1] + xPos[2]) /2;
+            int CAMidx = (xPos[2] + xPos[3]) /2;
             
+            int ABMidy = (yPos[0] + yPos[1]) /2;
+            int BCMidy = (yPos[1] + yPos[2]) /2;
+            int CAMidy = (yPos[2] + yPos[3]) /2;
+            
+            
+            xPos = new int[] {ABMidx, BCMidx, CAMidx, ABMidx};
+            yPos = new int[] {ABMidy, BCMidy, CAMidy, ABMidy};
+
             //draw the tri
-            
-            
+            Triangle(xPos, yPos, page);
             
             //call the 3 new triangles
            

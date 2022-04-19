@@ -11,7 +11,9 @@ public class GCD
     public static void main(String args[])
     {
         System.out.println(gcd(100,24));
-    
+        System.out.println(gcd(2,3));
+        System.out.println(gcd(5,15));
+        //System.out.println(gcd(100,24));
     
     }
     
