@@ -9,21 +9,27 @@ public class PyramidScheme
 {
     public static void main(String args[])
     {
-        collect(1000);
+        System.out.print(collect(4000));
     }
     
     public static int collect(int goal)
     {
-        if (goal/10  == 0)
+        if (goal/10 < 10)
         {
-            return 1;
+            return goal;
         }
         else{
-            for (int i = 0; i < 10; i++)
-            {
-                System.out.print(goal/10);
-            }
-            return collect(goal/10);
+            
+            return collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) +
+            collect(goal/10) + 
+            collect(goal/10) +
+            collect(goal/10);
         }
     }
 }

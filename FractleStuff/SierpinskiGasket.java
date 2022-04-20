@@ -66,8 +66,8 @@ public class SierpinskiGasket extends JPanel
 
    public void Triangle(int[] xPosit, int[] yPosit, Graphics page)
    {
-       int dxsquared = (int)Math.pow(xPos[0] - xPos[1],2);
-       int dysquared = (int)Math.pow(yPos[0] - yPos[1],2);
+       int dxsquared = (int)Math.pow(xPosit[0] - xPosit[1],2);
+       int dysquared = (int)Math.pow(yPosit[0] - yPosit[1],2);
        int distance = (int)Math.sqrt(dxsquared + dysquared);
 
 
@@ -78,22 +78,23 @@ public class SierpinskiGasket extends JPanel
             //int ABMidx = (xPos[0]
             //int ABMidy = (
             int ABMidx = (xPosit[0] + xPosit[1]) /2;
-            int BCMidx = (xPos[1] + xPos[2]) /2;
-            int CAMidx = (xPos[2] + xPos[3]) /2;
+            int BCMidx = (xPosit[1] + xPosit[2]) /2;
+            int CAMidx = (xPosit[2] + xPosit[3]) /2;
             
-            int ABMidy = (yPos[0] + yPos[1]) /2;
-            int BCMidy = (yPos[1] + yPos[2]) /2;
-            int CAMidy = (yPos[2] + yPos[3]) /2;
+            int ABMidy = (yPosit[0] + yPosit[1]) /2;
+            int BCMidy = (yPosit[1] + yPosit[2]) /2;
+            int CAMidy = (yPosit[2] + yPosit[3]) /2;
             
             
-            xPos = new int[] {ABMidx, BCMidx, CAMidx, ABMidx};
-            yPos = new int[] {ABMidy, BCMidy, CAMidy, ABMidy};
-
+            int[] xs = {ABMidx, BCMidx, CAMidx, ABMidx};
+            int[] ys = {ABMidy, BCMidy, CAMidy, ABMidy};
+            
+            page.drawPolyline (xs, ys, xs.length);
             //draw the tri
-            Triangle(xPos, yPos, page);
+            Triangle(xs, ys, page);
             
             //call the 3 new triangles
-           
+            
 
 
         }
