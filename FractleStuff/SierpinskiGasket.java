@@ -91,12 +91,23 @@ public class SierpinskiGasket extends JPanel
             
             page.drawPolyline (xs, ys, xs.length);
             //draw the tri
-            Triangle(xs, ys, page);
+            
             
             //call the 3 new triangles
+            int[] xsTOP = {CAMidx, BCMidx, (CAMidx+BCMidx)/2, CAMidx};
+            int[] ysTOP = {CAMidy, BCMidy, yPosit[2], CAMidy};
+
+            Triangle(xsTOP, ysTOP, page);
             
+            int[] xsRIGHT = {xPosit[0], ABMidx, (xPosit[0]+ABMidx)/2, xPosit[0]};
+            int[] ysRIGHT = {yPosit[0], ABMidy, CAMidy, yPosit[0]};
 
+            Triangle(xsRIGHT, ysRIGHT, page);
+            
+            int[] xsLEFT = {ABMidx, xPosit[1], (ABMidx+xPosit[1])/2, ABMidx};
+            int[] ysLEFT = {ABMidy, yPosit[1], BCMidy, ABMidy};
 
+            Triangle(xsLEFT, ysLEFT, page);
         }
 
 

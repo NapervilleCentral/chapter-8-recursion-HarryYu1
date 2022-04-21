@@ -19,7 +19,7 @@ public class PyramidScheme
             return goal;
         }
         else{
-            
+            System.out.println(goal);
             return collect(goal/10) +
             collect(goal/10) +
             collect(goal/10) +
