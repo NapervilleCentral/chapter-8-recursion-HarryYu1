@@ -16,6 +16,7 @@ public class PyramidScheme
     {
         if (goal/10 < 10)
         {
+            System.out.println(goal);
             return goal;
         }
         else{
