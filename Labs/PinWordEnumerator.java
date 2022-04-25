@@ -14,7 +14,7 @@ public class PinWordEnumerator
         System.out.println();
         System.out.printf("The keypad encodings for %s are:%n",num);
         enumerateWords(num);
-        enumerateWords(num, " ");
+        
     }
 
     /**
@@ -31,23 +31,8 @@ public class PinWordEnumerator
          
          //52
          
+         enumerateWords(n, " ");
          
-         String[] map = {"0","1","ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"};
-         
-         if (n.length() == 0)
-         {
-             System.out.print("\n");
-             
-            }
-         else{
-                int firstDigit = Integer.parseInt(n.substring(0,1));
-                for (int i = 0; i < map[firstDigit].length(); i++)
-                {
-                    
-                    System.out.print(map[firstDigit].charAt(i));
-                    enumerateWords(n.substring(1)); //cut off
-                }
-            }
     }
 
     /**
@@ -58,21 +43,21 @@ public class PinWordEnumerator
          */
         public static void enumerateWords(String pin, String word)
         {
-            
-        }
-
-    /*if (pin.length() == 0)
+        if (pin.length() == 0)
             {
                 System.out.printf("%s%n",word);
             }
             else
             {
                 String[] map = {"0","1","ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"};
-                    for(int i = 0; i <= map[Integer.parseInt(pin.substring(0,1))].length(); i++)
+                    for(int i = 0; i < map[Integer.parseInt(pin.substring(0,1))].length(); i++)
                     {
                         String newWord = word + map[Integer.parseInt(pin.substring(0,1))].charAt(i);
                         enumerateWords(pin.substring(1), newWord);
                     }
             }
-*/
+            
+        }
+
+    
     }
