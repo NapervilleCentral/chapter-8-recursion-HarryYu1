@@ -28,16 +28,24 @@ public class PinWordEnumerator
          // all possible phone keypad encodings for a
          // number. Implement additional auxiliary methods
          // if necessary.
+         
+         //52
+         
+         
+         String[] map = {"0","1","ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"};
+         
          if (n.length() == 0)
          {
-             System.out.print(n);
-             System.out.println();
+             System.out.print("\n");
+             
             }
          else{
-             for (int i = 0; i < n.length(); i++)
-             {
-                 System.out.print(n.charAt(i));
-                 enumerateWords(
+                int firstDigit = Integer.parseInt(n.substring(0,1));
+                for (int i = 0; i < map[firstDigit].length(); i++)
+                {
+                    
+                    System.out.print(map[firstDigit].charAt(i));
+                    enumerateWords(n.substring(1)); //cut off
                 }
             }
     }

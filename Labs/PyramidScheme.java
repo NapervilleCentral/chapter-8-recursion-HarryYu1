@@ -14,9 +14,10 @@ public class PyramidScheme
     
     public static int collect(int goal)
     {
-        if (goal/10 < 10)
+        System.out.println(goal);
+        if (goal < 10)
         {
-            System.out.println(goal);
+            
             return goal;
         }
         else{
